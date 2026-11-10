@@ -1,0 +1,228 @@
+{
+  "task": "안내문 기반 제출서류 내용 사전 점검",
+  "unit": "지원팀 1팀의 안내문과 제출서류 묶음 = 케이스 1건 = 판정 1건",
+  "output_keys": [
+    "packet_id",
+    "required_type_count",
+    "expected_count",
+    "received_count",
+    "missing_documents",
+    "duplicate_documents",
+    "uncertain_documents",
+    "format_status",
+    "signature_status",
+    "decision",
+    "reason",
+    "scope"
+  ],
+  "decision_values": [
+    "내용 완비",
+    "보완 요청",
+    "담당자 확인"
+  ],
+  "cases": [
+    {
+      "case_id": "A",
+      "file": "극락쿼카_최종제출_set01.pdf",
+      "documents": [
+        "신청서",
+        "활동계획서",
+        "활동서약서",
+        "개인정보 동의서"
+      ],
+      "answer": {
+        "packet_id": "MG-26-A",
+        "required_type_count": 4,
+        "expected_count": 6,
+        "received_count": 6,
+        "missing_documents": [],
+        "duplicate_documents": [],
+        "uncertain_documents": [],
+        "format_status": "원본 확인 필요",
+        "signature_status": "표시 확인",
+        "decision": "내용 완비",
+        "reason": "정상 서류",
+        "scope": "PDF 내용 사전 점검"
+      }
+    },
+    {
+      "case_id": "B",
+      "file": "극락쿼카_최종제출_set02.pdf",
+      "documents": [
+        "신청서",
+        "활동계획서",
+        "활동서약서",
+        "개인정보 동의서"
+      ],
+      "answer": {
+        "packet_id": "MG-26-B",
+        "required_type_count": 4,
+        "expected_count": 6,
+        "received_count": 5,
+        "missing_documents": [
+          "개인정보 동의서:박지민"
+        ],
+        "duplicate_documents": [],
+        "uncertain_documents": [],
+        "format_status": "원본 확인 필요",
+        "signature_status": "표시 확인",
+        "decision": "보완 요청",
+        "reason": "팀원 1명 동의서 누락",
+        "scope": "PDF 내용 사전 점검"
+      }
+    },
+    {
+      "case_id": "C",
+      "file": "극락쿼카_최종제출_set03.pdf",
+      "documents": [
+        "신청서",
+        "활동계획서",
+        "활동서약서",
+        "개인정보 동의서"
+      ],
+      "answer": {
+        "packet_id": "MG-26-C",
+        "required_type_count": 4,
+        "expected_count": 6,
+        "received_count": 6,
+        "missing_documents": [
+          "개인정보 동의서:박지민"
+        ],
+        "duplicate_documents": [
+          "개인정보 동의서:김하늘"
+        ],
+        "uncertain_documents": [],
+        "format_status": "원본 확인 필요",
+        "signature_status": "표시 확인",
+        "decision": "보완 요청",
+        "reason": "동의서 중복과 타인 누락",
+        "scope": "PDF 내용 사전 점검"
+      }
+    },
+    {
+      "case_id": "D",
+      "file": "극락쿼카_최종제출_set04.pdf",
+      "documents": [
+        "신청서",
+        "활동계획서",
+        "활동서약서",
+        "개인정보 동의서"
+      ],
+      "answer": {
+        "packet_id": "MG-26-D",
+        "required_type_count": 4,
+        "expected_count": 6,
+        "received_count": 6,
+        "missing_documents": [],
+        "duplicate_documents": [],
+        "uncertain_documents": [
+          "개인정보 동의서:박지민"
+        ],
+        "format_status": "원본 확인 필요",
+        "signature_status": "표시 확인",
+        "decision": "담당자 확인",
+        "reason": "다른 팀의 동의서 혼입",
+        "scope": "PDF 내용 사전 점검"
+      }
+    },
+    {
+      "case_id": "E",
+      "file": "극락쿼카_최종제출_set05.pdf",
+      "documents": [
+        "신청서",
+        "활동계획서",
+        "활동서약서",
+        "개인정보 동의서"
+      ],
+      "answer": {
+        "packet_id": "MG-26-E",
+        "required_type_count": 4,
+        "expected_count": 6,
+        "received_count": 6,
+        "missing_documents": [],
+        "duplicate_documents": [],
+        "uncertain_documents": [],
+        "format_status": "원본 확인 필요",
+        "signature_status": "표시 확인",
+        "decision": "내용 완비",
+        "reason": "필수 서류와 팀원별 개인정보 동의서가 모두 확인됨",
+        "scope": "PDF 내용 사전 점검"
+      }
+    },
+    {
+      "case_id": "F",
+      "file": "극락쿼카_최종제출_set06.pdf",
+      "documents": [
+        "신청서",
+        "활동계획서",
+        "개인정보 동의서"
+      ],
+      "answer": {
+        "packet_id": "MG-26-F",
+        "required_type_count": 4,
+        "expected_count": 6,
+        "received_count": 5,
+        "missing_documents": [
+          "활동서약서"
+        ],
+        "duplicate_documents": [],
+        "uncertain_documents": [],
+        "format_status": "원본 확인 필요",
+        "signature_status": "표시 확인",
+        "decision": "보완 요청",
+        "reason": "활동서약서 누락",
+        "scope": "PDF 내용 사전 점검"
+      }
+    },
+    {
+      "case_id": "G",
+      "file": "극락쿼카_최종제출_set07.pdf",
+      "documents": [
+        "신청서",
+        "활동계획서",
+        "활동서약서",
+        "개인정보 동의서"
+      ],
+      "answer": {
+        "packet_id": "MG-26-G",
+        "required_type_count": 0,
+        "expected_count": 0,
+        "received_count": 6,
+        "missing_documents": [],
+        "duplicate_documents": [],
+        "uncertain_documents": [],
+        "format_status": "담당자 확인",
+        "signature_status": "별도 요건 없음",
+        "decision": "담당자 확인",
+        "reason": "안내문 부재",
+        "scope": "PDF 내용 사전 점검"
+      }
+    },
+    {
+      "case_id": "H",
+      "file": "극락쿼카_최종제출_set08.pdf",
+      "documents": [
+        "신청서",
+        "활동계획서",
+        "활동서약서",
+        "개인정보 동의서"
+      ],
+      "answer": {
+        "packet_id": "MG-26-H",
+        "required_type_count": 4,
+        "expected_count": 6,
+        "received_count": 6,
+        "missing_documents": [],
+        "duplicate_documents": [],
+        "uncertain_documents": [
+          "개인정보 동의서:작성자 불명"
+        ],
+        "format_status": "원본 확인 필요",
+        "signature_status": "담당자 확인",
+        "decision": "담당자 확인",
+        "reason": "동의서 작성자·서명 저품질",
+        "scope": "PDF 내용 사전 점검"
+      }
+    }
+  ]
+}

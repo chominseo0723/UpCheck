@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.clasprc.json
+.clasp.json
+credentials*.json
+secrets*.json
+*.log
+tests/mail-preview.html
+.DS_Store
+Thumbs.db

@@ -1,0 +1,12 @@
+{
+  "name": "upcheck",
+  "version": "1.0.0",
+  "private": true,
+  "description": "안내문 기준 제출서류 누락·중복 점검과 Gmail 보완 답장 재검사",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "check:build": "node scripts/build.cjs --check",
+    "test": "node scripts/build.cjs && node tests/test.cjs && node tests/privacy-test.cjs && node tests/recovery-test.cjs && node tests/settings-test.cjs"
+  }
+}
